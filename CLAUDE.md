@@ -1,7 +1,7 @@
 # agent-hub
 
-A sample hub repo showing one way to organize context for a coding
-agent: a short `CLAUDE.md`, durable `docs/`, and dated `mds/`.
+A hub repo: where agent sessions start, with their context kept as
+plain files -- durable `docs/` and dated `mds/`.
 
 See @docs/spec.md for overview and @docs/index.md for the docs.
 Working documents are listed in `mds/index.md`; search it rather than

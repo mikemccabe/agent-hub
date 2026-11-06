@@ -6,4 +6,4 @@ Durable reference: what the system is. Conventions in [dated-markdown.md](dated-
 
 - [dated-markdown.md](dated-markdown.md) — Conventions for durable docs/ and dated mds/ -- frontmatter summaries, the generated indexes, _Updated lines, companion directories, supersession.
 - [hub.md](hub.md) — The multi-repo hub pattern -- one repo where cross-repo sessions start, and the additionalDirectories setting that lets it read its siblings.
-- [spec.md](spec.md) — Repo overview -- what this hub is and its layout. Start here.
+- [spec.md](spec.md) — Repo overview -- what this hub is for and its layout. Start here.

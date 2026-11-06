@@ -1,14 +1,14 @@
 ---
-summary: Repo overview -- what this hub is and its layout. Start here.
+summary: Repo overview -- what this hub is for and its layout. Start here.
 ---
 
 # agent-hub
 
 _Updated: 2026-11-06_
 
-A sample hub repo for working with a coding agent across several
-sibling repos. The docs describe conventions; `mds/` holds an
-illustrative sample entry.
+A hub repo for working with a coding agent across several sibling
+repos: sessions start here, and their context lives in `docs/` and
+`mds/` as plain files under git.
 
 ## Layout
 
