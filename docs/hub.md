@@ -37,10 +37,10 @@ through the usual permission flow.
 
 ## Why one hub instead of a session per repo
 
-- **Cross-repo investigations** — a question often touches a service,
+- **Cross-repo investigations** -- a question often touches a service,
   its client, and the deploy config at once. One session keeps that
   context together.
-- **Working documents in one place** — notes for cross-cutting work
+- **Working documents in one place** -- notes for cross-cutting work
   live in the hub's `mds/`, not scattered across project repos.
 
 ## What stays in the sibling repo

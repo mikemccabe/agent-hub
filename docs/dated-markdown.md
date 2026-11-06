@@ -13,8 +13,8 @@ _Updated: 2026-11-06_
 
 Two flavors:
 
-- **`docs/`** — long-lived reference. Describes how things are.
-- **`mds/`** — dated working documents. Planning, investigation,
+- **`docs/`** -- long-lived reference. Describes how things are.
+- **`mds/`** -- dated working documents. Planning, investigation,
   dead ends at a point in time.
 
 ## Progressive disclosure
@@ -77,7 +77,7 @@ stay in the md.
 ## docs/
 
 Each long-lived doc carries `_Updated: YYYY-MM-DD_` right after the H1
-(blank line on each side). Bump for substantive changes — new sections,
+(blank line on each side). Bump for substantive changes -- new sections,
 factual corrections, structural rewrites. Don't bump for typo fixes,
 link tweaks, or formatting-only changes. ISO format.
 
@@ -194,7 +194,7 @@ files are indexed.
 ### Philosophy
 
 These are **not authoritative**. The date prefix signals documents may go
-stale — they capture planning, investigations, dead ends, and
+stale -- they capture planning, investigations, dead ends, and
 implementations at a point in time. Verify against code and git history
 before trusting any document.
 
@@ -271,5 +271,5 @@ _Superseded 2026-05-20 by [feature-plan-v2](2026-05-20-feature-plan-v2.md).
 Kept for the original requirements analysis._
 ```
 
-Do not delete or rewrite the old doc — it remains the historical record
+Do not delete or rewrite the old doc -- it remains the historical record
 for that point in time. Only the frontmatter and preamble change.

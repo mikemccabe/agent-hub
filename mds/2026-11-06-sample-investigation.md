@@ -16,11 +16,11 @@ the regression is in the page, the API behind it, or the deploy.
 
 ## What I looked at (cross-repo)
 
-1. **`../web`** — the checkout page renders the same; no change to its
+1. **`../web`** -- the checkout page renders the same; no change to its
    bundle since the slowdown began.
-2. **`../api`** — the cart endpoint's response time stepped up on one
+2. **`../api`** -- the cart endpoint's response time stepped up on one
    date, matching the slowdown.
-3. **`../infra`** — a config change the same day lowered the API's
+3. **`../infra`** -- a config change the same day lowered the API's
    connection pool size.
 
 ## Hypothesis
