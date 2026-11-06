@@ -45,11 +45,12 @@ git and `python3` both come with the Xcode Command Line Tools:
 
 Then:
 
-1. Rewrite the top of [docs/spec.md](docs/spec.md) to say what your hub
-   is for.
-2. If you have sibling repos, list them in
+1. If you have sibling repos, list them in
    `.claude/settings.local.json` (see [docs/hub.md](docs/hub.md)). The
    file is yours alone and is gitignored.
+2. Consider turning off the agent's own memory, so that findings land
+   in `mds/` where they are tracked ("Agent memory" in
+   [docs/dated-markdown.md](docs/dated-markdown.md)).
 3. Delete the two sample files, [docs/shop.md](docs/shop.md) and
    [mds/2026-11-06-slow-checkout.md](mds/2026-11-06-slow-checkout.md),
    once you have your own, or keep them as format references.

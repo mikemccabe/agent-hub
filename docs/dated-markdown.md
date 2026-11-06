@@ -77,6 +77,20 @@ stay in the md.
   itself, or its own source (a website, a spreadsheet, the code and its
   history). Point at it instead.
 
+### Agent memory
+
+Claude Code can also keep notes of its own between sessions (auto
+memory), in a directory outside the repo. In a hub, consider turning it
+off: a finding kept there is unversioned, local to one machine and
+invisible to anyone reading the repo, and it is one less reason to
+write the md. With it off, what is worth keeping gets an md, and the
+indexes are the one place to look. It is a user-wide setting, in
+`~/.claude/settings.json`:
+
+```json
+{ "autoMemoryEnabled": false }
+```
+
 ## docs/
 
 Each long-lived doc carries `_Updated: YYYY-MM-DD_` right after the H1
