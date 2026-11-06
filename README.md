@@ -62,6 +62,10 @@ the record stays yours only if it lives somewhere you control.
   `bin/md-index`, run by the git pre-commit hook. Convention:
   [docs/dated-markdown.md](docs/dated-markdown.md).
 
+- **`/md` skill** — "make an md" or `/md` creates a dated working
+  document and commits it. The skill is a few lines; the convention it
+  follows lives in [docs/dated-markdown.md](docs/dated-markdown.md).
+
 - **Multi-repo hub** — sessions for work that spans several sibling
   repos start here, with cross-repo notes kept in `mds/`. See
   [docs/hub.md](docs/hub.md).

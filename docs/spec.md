@@ -18,6 +18,7 @@ repos: sessions start here, and their context lives in `docs/` and
 | `docs/` | Durable reference, listed in [index.md](index.md) |
 | `mds/` | Dated working documents, listed in [../mds/index.md](../mds/index.md) |
 | `bin/md-index` | Generates both indexes from each doc's `summary:` frontmatter |
+| `.claude/skills/md/` | The `/md` skill: create a dated md per [dated-markdown.md](dated-markdown.md) and commit it |
 | `.githooks/` | `pre-commit` runs `bin/md-index` and stages the indexes; `post-commit` resyncs them after a pathspec commit |
 
 Both indexes are generated and committed, so they read correctly on the
