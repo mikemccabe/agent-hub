@@ -19,13 +19,13 @@ On GitHub, **Use this template** at the top of the repo page makes the
 copy, or from a terminal:
 
 ```sh
-gh repo create my-hub --template <owner>/agent-hub --private --clone
+gh repo create my-hub --template mikemccabe/agent-hub --private --clone
 ```
 
 Anywhere else, clone and start a fresh history:
 
 ```sh
-git clone --depth 1 <this-repo-url> my-hub
+git clone --depth 1 https://github.com/mikemccabe/agent-hub my-hub
 cd my-hub
 rm -rf .git && git init
 git add -A && git commit -m "Start from agent-hub"
@@ -39,7 +39,9 @@ git config core.hooksPath .githooks
 
 Hooks are per clone, so repeat that on any other machine you clone your
 hub to. The pre-commit hook needs Python 3, found as `python3` or
-`python` on your PATH; nothing beyond the standard library.
+`python` on your PATH; nothing beyond the standard library. On a Mac,
+git and `python3` both come with the Xcode Command Line Tools:
+`xcode-select --install`.
 
 Then:
 
