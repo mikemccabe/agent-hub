@@ -24,8 +24,8 @@ create or keep editing one unprompted; the user decides.
 ## Committing
 
 A doc is part of the record once it is committed, and the indexes
-update on commit. When a change to `docs/` or `mds/` is complete and
-uncommitted, suggest committing it in one line. Commit by pathspec
+update on commit. When a change to `docs/` or `mds/` is complete,
+commit it without asking. Commit by pathspec
 (`git commit -m ... -- <paths>`), so only the files of this change go
 in. An md made with `/md` is committed as it is created.
 
