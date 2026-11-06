@@ -36,8 +36,8 @@ Then:
 3. Delete the sample working document in `mds/` once you have your
    own, or keep it as a format reference.
 
-Push to a private remote of your own: the record is only yours if it
-lives somewhere you control.
+A remote is optional. If you add one, make it private and your own:
+the record stays yours only if it lives somewhere you control.
 
 ## What's here
 
