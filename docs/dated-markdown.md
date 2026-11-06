@@ -135,7 +135,8 @@ A page's index entry is loaded into every session (see
 [Progressive disclosure](#progressive-disclosure)), so a page earns its
 place while a session might need it unprompted. When that stops -- the
 project ends, the subject goes dormant -- `git mv` it to
-`mds/YYYY-MM-DD-<slug>.md` dated the day of the move, note the move and
+`mds/YYYY-MM-DD-<slug>.md` dated the day of the move, move any files
+that belong only to it into its companion directory, note the move and
 its reason in its summary, and re-point any links to it in the same
 commit.
 
@@ -220,13 +221,15 @@ mds/
   index.md                       # generated
   2026-05-27-feature-plan.md
   2026-05-28-api-design.md
-  2026-05-29-chart/              # companion asset bundle (same date prefix)
+  2026-05-29-chart.md
+  2026-05-29-chart/              # its companion directory
 ```
 
-A dated doc may have a sibling directory with the **same date prefix**
-holding companion assets (served HTML, structured data, scraped sources,
-helper scripts). Date the directory like the doc so it stays grouped
-chronologically and obviously paired.
+A dated doc may have a **companion directory** (a sidecar): a sibling
+directory with the doc's name minus `.md`, holding the files that go
+with it -- data, images, scripts, saved sources, generated pages. It
+sorts next to the doc, so the pair stays together, and the doc links
+into it by relative path.
 
 ### Naming plan elements
 
