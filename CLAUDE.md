@@ -15,6 +15,12 @@ adding or substantively changing a doc. Never edit `docs/index.md` or
 `mds/index.md` by hand: the pre-commit hook regenerates them, and
 `bin/md-index` does the same when the hook is not enabled.
 
+## Suggesting an md
+
+When a chat reaches a meaningful conclusion -- a finding, a decision, a
+dead end worth not repeating -- suggest "make an md" in one line. Don't
+create or keep editing one unprompted; the user decides.
+
 ## Doc timestamps
 
 Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line
