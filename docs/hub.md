@@ -17,8 +17,8 @@ several repos, projects, or subjects. The hub:
 
 ## additionalDirectories
 
-In `.claude/settings.local.json` (per-user, since the paths depend on
-where each person keeps their clones):
+In `.claude/settings.local.json` (per-user and gitignored, since the
+paths depend on where each person keeps their clones):
 
 ```json
 {

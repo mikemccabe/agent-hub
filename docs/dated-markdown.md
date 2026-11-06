@@ -168,7 +168,7 @@ regenerates them from the staged docs and stages the result, so a
 commit that adds a doc or changes a summary carries the index update
 with it. The hook is enabled per clone with
 `git config core.hooksPath .githooks`; without it, run `bin/md-index`
-before committing. `bin/md-index --check` exits non-zero when an index
+(or `python bin/md-index`) before committing. `bin/md-index --check` exits non-zero when an index
 is stale.
 
 ### Keep the summary a pointer

@@ -12,6 +12,8 @@ Usage:
     bin/md-index --staged   same, reading docs from the git index (pre-commit)
     bin/md-index --check    exit 1 if either index is stale, else 0
 
+Run as `python bin/md-index ...` where `python3` is not on the PATH.
+
 Only a small YAML subset is read (stdlib only, no PyYAML): top-level
 `key: value` lines, quoted values, and `>`/`>-`/`|` block scalars.
 """

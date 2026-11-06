@@ -2,5 +2,9 @@
 # Regenerate docs/index.md and mds/index.md from the staged docs and
 # stage the result. Enable once per clone: git config core.hooksPath .githooks
 root=$(git rev-parse --show-toplevel) || exit 1
-"$root/bin/md-index" --staged || exit 1
+py=$(command -v python3 || command -v python) || {
+  echo "pre-commit: Python 3 (python3 or python on PATH) is needed to regenerate the indexes" >&2
+  exit 1
+}
+"$py" "$root/bin/md-index" --staged || exit 1
 git add -- "$root/docs/index.md" "$root/mds/index.md"
