@@ -23,10 +23,11 @@ create or keep editing one unprompted; the user decides.
 
 ## Writing in docs/
 
-Before adding a number, a version, a list of things, or a status line
-to a `docs/` page, apply "Keeping churn out of docs/" in
-[docs/dated-markdown.md](docs/dated-markdown.md): the query rather than
-the answer, scale rather than a count, status in an md.
+Before adding a number, a list, a version, a status line or a bit of
+history to a `docs/` page, apply "Keeping churn out of docs/" in
+[docs/dated-markdown.md](docs/dated-markdown.md): where to look rather
+than the answer, scale rather than a count, status and history in an
+md.
 
 ## Doc timestamps
 

@@ -30,64 +30,75 @@ behave. Agent behavior belongs in `CLAUDE.md`.
 
 A fact lives at the innermost layer that serves its reader, once:
 
-1. **The tool or config itself.** Best is making the doc unnecessary:
-   fix the footgun (an option, a guard, a better error), let `--help`
-   own the recipes, and put a caveat that guards an edit site in a
-   comment at that site.
-2. **The `docs/` page.** What it is, how to invoke it, and pointers
-   down. It does not restate the layers above or below.
-3. **The dated md.** Mechanism, evidence, history, dead ends.
+1. **The thing itself.** Best is making the doc unnecessary: fix the
+   trap rather than documenting it, and put a note that guards a
+   specific spot (a form field, a spreadsheet cell, a line of code)
+   at that spot.
+2. **The `docs/` page.** What it is, how to use it, and pointers down.
+   It does not restate the layers above or below.
+3. **The dated md.** How it works in detail, evidence, history, dead
+   ends.
 
-When detail cannot be deferred safely -- an innocent-looking edit would
-break something silently -- the page carries a one-line warning and a
-pointer, not the mechanism.
+When detail cannot be deferred safely -- an innocent-looking change
+would break something without anyone noticing -- the page carries a
+one-line warning and a pointer, not the full explanation.
 
 Work in flight on a page's subject shows on the page as one line
 pointing at its md, removed when the work ends. The page changes only
-when the system it describes changes; the work's status and history
+when the thing it describes changes; the work's status and history
 stay in the md.
 
 ### Keeping churn out of docs/
 
-A precise fact whose half-life is shorter than the page's revision
-cadence is a churn center: it reads stale on the next visit, and the
-next review spends effort re-deriving a figure nobody acts on. The page
-carries the structure; the number lives where it is generated.
+A precise fact that changes faster than the page gets revised is a
+churn center: it reads stale on the next visit, and the next review
+spends effort re-checking a figure nobody acts on. The page carries the
+structure -- what exists, how it fits together, where to look -- and
+the changing detail lives at its source.
 
-- **The query, not the answer.** Where a reader can run a command, the
-  page gives the command and at most one dated sample of its output.
-- **Scale, not census.** "Thousands of hosts" stays true for years. A
+- **Where to look, not what it says today.** When a fact can be looked
+  up -- a spreadsheet, a calendar, a website, a dashboard, a command --
+  the page says where and how, with at most one dated example of the
+  answer.
+- **Scale, not a count.** "A few dozen members" or "hundreds of
+  recipes" stays true for years; "37 members" is wrong next month. A
   precise count appears only when the count is the point, and then
   dated.
-- **A rule, not a value, for anything that tracks usage.** Growth,
-  ratios, shares. When a value is needed: one dated range in one place,
-  every other mention relative to it.
-- **Config values appear once, with their file named.** Other pages
-  point at that page.
-- **Names, not line numbers.** Citations into code name the function,
-  variable or setting; line numbers move.
-- **Versions: a floor or a pin is kept; what's running today is a
-  query.**
-- **Status lines go to an md.** "Still open", "not yet", "currently",
-  "as of" go stale silently. The page keeps at most a one-line pointer.
+- **A rule, not a value, for anything that rises and falls.** Costs,
+  traffic, sizes, shares. When a value is needed: one dated figure in
+  one place, every other mention relative to it.
+- **Settings appear once, with their source named.** A price, a
+  deadline, a limit, a schedule that is set somewhere else: one page
+  quotes it and names where it is set; other pages point there.
+- **Lists of who or what live in their own source.** Members, contacts,
+  machines, accounts: the page names the list and where it is kept,
+  not a copy of it.
+- **Name the thing, not its position.** Point into another document by
+  section title or name, not page or line number; positions move.
+- **Versions and editions: a minimum or a deliberate pin is kept;
+  what's in use today is something to look up.**
+- **Status goes to an md.** "Still open", "waiting on", "not yet",
+  "currently", "as of" go stale silently. The page keeps at most a
+  one-line pointer to the md tracking it.
+- **History goes to an md.** What happened, and in what order, is the
+  record of its time; the page describes how things are.
 - **One figure, one home.** A number stated on two pages drifts on one
   of them; the second page points at the first.
-- **A measurement that is the deliverable is an md**; the page cites
-  it.
-- **Provenance dates stay.** "Verified 2026-07-15" tells the reader how
+- **A finding that is the deliverable is an md**; the page cites it.
+- **Provenance dates stay.** "Checked 2026-07-15" tells the reader how
   old the check is; refresh it only when the fact is re-checked.
 - **Drift gets this treatment, not a new number.** A fresher figure
   written in reads stale again by the next visit.
 
-A page whose table is the record (an inventory, a key list) says so in
-one line and is exempt.
+A page whose table is the record -- an inventory, a contact list, a log
+-- says so in one line and is exempt.
 
 ### Demoting a page to mds/
 
 `docs/index.md` is loaded into every session, so each entry costs
 startup context indefinitely; `mds/index.md` is read only on demand. A
 page earns its place while a session might need it unprompted. When
-that stops -- the service is retired, the tool unused -- `git mv` it to
+that stops -- the project ends, the subject goes dormant -- `git mv` it to
 `mds/YYYY-MM-DD-<slug>.md` dated the day of the move, note the move and
 its reason in its summary, and re-point any links to it in the same
 commit.
