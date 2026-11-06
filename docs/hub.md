@@ -1,3 +1,7 @@
+---
+summary: The multi-repo hub pattern -- one repo where cross-repo sessions start, and the additionalDirectories setting that lets it read its siblings.
+---
+
 # The Multi-Repo Hub Pattern
 
 _Updated: 2026-11-06_

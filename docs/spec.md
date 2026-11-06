@@ -1,3 +1,7 @@
+---
+summary: Repo overview -- what this hub is and its layout. Start here.
+---
+
 # agent-hub
 
 _Updated: 2026-11-06_
@@ -10,13 +14,12 @@ illustrative sample entry.
 
 | Path | Contents |
 |------|----------|
-| `CLAUDE.md` | Agent instructions; `@`-includes this file |
-| `docs/` | Durable reference, indexed here |
-| `mds/` | Dated working documents, indexed by `mds/index.md` |
+| `CLAUDE.md` | Agent instructions; `@`-includes this file and `docs/index.md` |
+| `docs/` | Durable reference, listed in [index.md](index.md) |
+| `mds/` | Dated working documents, listed in [../mds/index.md](../mds/index.md) |
+| `bin/md-index` | Generates both indexes from each doc's `summary:` frontmatter |
+| `.githooks/pre-commit` | Runs `bin/md-index` and stages the indexes |
 
-## Docs
-
-- [hub.md](hub.md) — the multi-repo hub pattern and the
-  `additionalDirectories` setting that makes cross-repo reads work
-- [dated-markdown.md](dated-markdown.md) — conventions for durable
-  `docs/` and dated `mds/`
+Both indexes are generated and committed, so they read correctly on the
+web and in a fresh clone. The hook keeps them current; it is enabled
+per clone (see the README).

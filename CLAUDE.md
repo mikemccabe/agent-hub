@@ -3,17 +3,23 @@
 A sample hub repo showing one way to organize context for a coding
 agent: a short `CLAUDE.md`, durable `docs/`, and dated `mds/`.
 
-See @docs/spec.md for overview.
+See @docs/spec.md for overview and @docs/index.md for the docs.
+Working documents are listed in `mds/index.md`; search it rather than
+reading it whole.
+
+## Frontmatter and indexes
+
+Every doc in `docs/` and `mds/` starts with a YAML frontmatter block
+whose `summary:` is its index entry. Write or revise the summary when
+adding or substantively changing a doc. Never edit `docs/index.md` or
+`mds/index.md` by hand: the pre-commit hook regenerates them, and
+`bin/md-index` does the same when the hook is not enabled.
 
 ## Doc timestamps
 
-Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line as the
-second line of the file (right after the H1, blank line on each side).
-
-Bump the date for substantive revisions — new sections, factual
-corrections, structural rewrites. Do not bump it for typo fixes, link
-tweaks, or formatting-only changes. ISO format.
-
-This convention applies to `docs/` only. Working documents under `mds/`
-already encode their date in the filename. Full convention in
+Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line
+right after the H1 (blank line on each side). Bump it for substantive
+revisions -- new sections, factual corrections, structural rewrites --
+not for typo fixes, link tweaks, or formatting. Working documents under
+`mds/` encode their date in the filename instead. Full convention in
 [docs/dated-markdown.md](docs/dated-markdown.md).

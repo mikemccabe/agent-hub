@@ -1,3 +1,9 @@
+---
+summary: >-
+  Illustrative entry showing the format: a slow checkout page traced
+  across the web, api and infra repos to a smaller connection pool. Open.
+---
+
 # 2026-11-06 Sample investigation: slow checkout page
 
 _A sample `mds/` entry. Not a real investigation; it shows the shape of
