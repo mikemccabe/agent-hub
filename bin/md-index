@@ -2,7 +2,8 @@
 """md-index -- generate docs/index.md and mds/index.md from frontmatter.
 
 Each doc starts with a YAML frontmatter block whose `summary:` is its
-index entry. docs/ is listed alphabetically; mds/ (date-prefixed files
+index entry, marked when `status: superseded` (with `superseded-by:`
+as its link). docs/ is listed alphabetically; mds/ (date-prefixed files
 only) newest first, grouped by month. Output is deterministic, so a
 rerun changes nothing unless a summary or file changed.
 
@@ -94,10 +95,15 @@ class Source:
 
 def entry(src, sub, name):
     text = src.read(sub, name)
-    summary = frontmatter(text).get("summary")
+    fm = frontmatter(text)
+    summary = fm.get("summary")
     if not summary:
         sys.stderr.write(f"md-index: warning: {sub}/{name} has no summary\n")
         summary = f"(no summary) {first_h1(text)}".strip()
+    if fm.get("status") == "superseded":
+        target = fm.get("superseded-by")
+        summary = (f"*(superseded by [{target}]({target}))* " if target
+                   else "*(superseded)* ") + summary
     return f"- [{name}]({name}) — {summary}"
 
 

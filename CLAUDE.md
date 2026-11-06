@@ -21,6 +21,13 @@ When a chat reaches a meaningful conclusion -- a finding, a decision, a
 dead end worth not repeating -- suggest "make an md" in one line. Don't
 create or keep editing one unprompted; the user decides.
 
+## Writing in docs/
+
+Before adding a number, a version, a list of things, or a status line
+to a `docs/` page, apply "Keeping churn out of docs/" in
+[docs/dated-markdown.md](docs/dated-markdown.md): the query rather than
+the answer, scale rather than a count, status in an md.
+
 ## Doc timestamps
 
 Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line
