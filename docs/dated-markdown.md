@@ -114,8 +114,8 @@ the changing detail lives at its source.
   not a copy of it.
 - **Name the thing, not its position.** Point into another document by
   section title or name, not page or line number; positions move.
-- **Versions and editions: a minimum or a deliberate pin is kept;
-  what's in use today is something to look up.**
+- **Versions and editions: keep a minimum or a deliberate pin.** What
+  is in use today is something to look up.
 - **Status goes to an md.** "Still open", "waiting on", "not yet",
   "currently", "as of" go stale silently. The page keeps at most a
   one-line pointer to the md tracking it.
@@ -123,7 +123,8 @@ the changing detail lives at its source.
   record of its time; the page describes how things are.
 - **One figure, one home.** A number stated on two pages drifts on one
   of them; the second page points at the first.
-- **A finding that is the deliverable is an md**; the page cites it.
+- **A finding is an md.** When the finding is the deliverable, it gets
+  an md and the page cites it.
 - **Provenance dates stay.** "Checked 2026-07-15" tells the reader how
   old the check is; refresh it only when the fact is re-checked.
 - **Drift gets this treatment, not a new number.** A fresher figure

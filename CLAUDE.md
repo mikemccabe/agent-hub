@@ -1,9 +1,6 @@
 # agent-hub
 
-A hub repo: where agent sessions start, with their context kept as
-plain files -- durable `docs/` and dated `mds/`.
-
-See @docs/spec.md for overview and @docs/index.md for the docs.
+See @docs/spec.md for what this hub is and @docs/index.md for the docs.
 Working documents are listed in `mds/index.md`; search it rather than
 reading it whole.
 
@@ -40,8 +37,6 @@ md.
 ## Doc timestamps
 
 Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line
-right after the H1 (blank line on each side). Bump it for substantive
-revisions -- new sections, factual corrections, structural rewrites --
-not for typo fixes, link tweaks, or formatting. Working documents under
-`mds/` encode their date in the filename instead. Full convention in
+right after the H1. Bump it for substantive revisions only, not for
+typo fixes, link tweaks or formatting; see "docs/" in
 [docs/dated-markdown.md](docs/dated-markdown.md).
