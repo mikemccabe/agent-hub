@@ -6,4 +6,4 @@ Dated working documents capture thinking at a point in time. **Do not assume any
 
 ## November 2026
 
-- [2026-11-06-sample-investigation.md](2026-11-06-sample-investigation.md) -- Illustrative entry showing the format: a slow checkout page traced across the web, api and infra repos to a smaller connection pool. Open.
+- [2026-11-06-slow-checkout.md](2026-11-06-slow-checkout.md) -- Why the checkout page got slow: traced across the web, api and infra repos to a smaller API connection pool. Open; next is to restore the pool size on one instance and compare. A sample md.

@@ -17,6 +17,9 @@ Two flavors:
 - **`mds/`** -- dated working documents. Planning, investigation,
   dead ends at a point in time.
 
+The two sample files show the shapes: [shop.md](shop.md), a page, and
+[slow-checkout](../mds/2026-11-06-slow-checkout.md), an md.
+
 ## Progressive disclosure
 
 A session starts with very little and follows pointers to the rest:
@@ -148,8 +151,9 @@ one required key is `summary:`, the doc's index entry:
 ```markdown
 ---
 summary: >-
-  Why checkout got slow in early November: a smaller API connection
-  pool. Fixed by restoring the pool size.
+  Why the checkout page got slow: traced across the web, api and infra
+  repos to a smaller API connection pool. Open; next is to restore the
+  pool size on one instance and compare.
 ---
 
 # 2026-11-06 Slow checkout page

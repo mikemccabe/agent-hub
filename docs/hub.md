@@ -33,7 +33,8 @@ paths depend on where each person keeps their clones):
 ```
 
 A session started in the hub can then read those paths. Edits still go
-through the usual permission flow.
+through the usual permission flow. [shop.md](shop.md) is a sample page
+mapping such a workspace.
 
 ## Why one hub instead of a session per repo
 

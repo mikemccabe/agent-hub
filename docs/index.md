@@ -6,4 +6,5 @@ Durable reference: how things are. Conventions in [dated-markdown.md](dated-mark
 
 - [dated-markdown.md](dated-markdown.md) -- Conventions for durable docs/ and dated mds/ -- progressive disclosure and layered detail, when to write an md or a docs/ page, keeping churn out of docs/, demoting a page, frontmatter summaries and the generated indexes, checking for prior mds, naming plan elements, citing mds, companion directories, supersession.
 - [hub.md](hub.md) -- The multi-repo hub pattern -- one repo where cross-repo sessions start, and the additionalDirectories setting that lets it read its siblings.
+- [shop.md](shop.md) -- The shop: the three sibling repos behind the store (web, api, infra), what each is, and where to look for deploys, dashboards, owners and settings. A sample page.
 - [spec.md](spec.md) -- Repo overview -- what this hub is for and its layout. Start here.

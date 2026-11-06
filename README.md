@@ -48,8 +48,9 @@ Then:
 2. If you have sibling repos, list them in
    `.claude/settings.local.json` (see [docs/hub.md](docs/hub.md)). The
    file is yours alone and is gitignored.
-3. Delete the sample working document in `mds/` once you have your
-   own, or keep it as a format reference.
+3. Delete the two sample files, [docs/shop.md](docs/shop.md) and
+   [mds/2026-11-06-slow-checkout.md](mds/2026-11-06-slow-checkout.md),
+   once you have your own, or keep them as format references.
 
 A remote is optional; the clone path above works without one. If you
 keep one, make it private and your own: the record stays yours only if

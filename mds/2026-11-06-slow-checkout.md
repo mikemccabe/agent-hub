@@ -1,18 +1,21 @@
 ---
 summary: >-
-  Illustrative entry showing the format: a slow checkout page traced
-  across the web, api and infra repos to a smaller connection pool. Open.
+  Why the checkout page got slow: traced across the web, api and infra
+  repos to a smaller API connection pool. Open; next is to restore the
+  pool size on one instance and compare. A sample md.
 ---
 
-# 2026-11-06 Sample investigation: slow checkout page
+# 2026-11-06 Slow checkout page
 
 _A sample `mds/` entry. Not a real investigation; it shows the shape of
-a working document and how one hub session spans sibling repos._
+a working document and how one hub session spans sibling repos. Delete
+it once you have your own._
 
 ## Context
 
 Checkout page load time crept up over the past week. Goal: find whether
-the regression is in the page, the API behind it, or the deploy.
+the regression is in the page, the API behind it, or the deploy. The
+repos are mapped in [the shop](../docs/shop.md).
 
 ## What I looked at (cross-repo)
 
