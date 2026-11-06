@@ -18,7 +18,7 @@ illustrative sample entry.
 | `docs/` | Durable reference, listed in [index.md](index.md) |
 | `mds/` | Dated working documents, listed in [../mds/index.md](../mds/index.md) |
 | `bin/md-index` | Generates both indexes from each doc's `summary:` frontmatter |
-| `.githooks/pre-commit` | Runs `bin/md-index` and stages the indexes |
+| `.githooks/` | `pre-commit` runs `bin/md-index` and stages the indexes; `post-commit` resyncs them after a pathspec commit |
 
 Both indexes are generated and committed, so they read correctly on the
 web and in a fresh clone. The hook keeps them current; it is enabled

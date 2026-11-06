@@ -1,0 +1,9 @@
+#!/bin/sh
+# After a pathspec commit (git commit -- <paths>) the generated indexes
+# land in the commit but not in the real index; resync them when the
+# working tree matches HEAD, so this never stages anything new.
+root=$(git rev-parse --show-toplevel) || exit 0
+for f in docs/index.md mds/index.md; do
+  git diff --quiet HEAD -- "$root/$f" && git add -- "$root/$f"
+done
+exit 0
