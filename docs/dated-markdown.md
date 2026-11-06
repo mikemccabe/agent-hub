@@ -1,7 +1,8 @@
 ---
 summary: >-
-  Conventions for durable docs/ and dated mds/ -- layered detail, keeping
-  churn out of docs/, demoting a page, frontmatter summaries and the
+  Conventions for durable docs/ and dated mds/ -- progressive disclosure
+  and layered detail, when to write an md or a docs/ page, keeping churn
+  out of docs/, demoting a page, frontmatter summaries and the
   generated indexes, checking for prior mds, naming plan elements,
   citing mds, companion directories, supersession.
 ---
@@ -12,23 +13,29 @@ _Updated: 2026-11-06_
 
 Two flavors:
 
-- **`docs/`** — long-lived reference. Describes what the system is.
+- **`docs/`** — long-lived reference. Describes how things are.
 - **`mds/`** — dated working documents. Planning, investigation,
   dead ends at a point in time.
 
-## docs/
+## Progressive disclosure
 
-Each long-lived doc carries `_Updated: YYYY-MM-DD_` right after the H1
-(blank line on each side). Bump for substantive changes — new sections,
-factual corrections, structural rewrites. Don't bump for typo fixes,
-link tweaks, or formatting-only changes. ISO format.
+A session starts with very little and follows pointers to the rest:
 
-Content is agent-agnostic: describe the system, not how agents should
-behave. Agent behavior belongs in `CLAUDE.md`.
+1. `CLAUDE.md`, with `docs/spec.md` and `docs/index.md`: loaded into
+   every session.
+2. A `docs/` page: read when its index entry says it is relevant.
+3. `mds/index.md`: searched for keywords, never read whole.
+4. A dated md: read when its summary matches.
+
+A line in the top layer costs context in every session, whether it is
+needed or not; a line further down costs only when it is read. So the
+always-loaded layers hold pointers and one-line summaries, and detail
+sits as far down as it can while still being found.
 
 ### Layered detail
 
-A fact lives at the innermost layer that serves its reader, once:
+The same rule applies to a single subject. A fact lives at the
+innermost layer that serves its reader, once:
 
 1. **The thing itself.** Best is making the doc unnecessary: fix the
    trap rather than documenting it, and put a note that guards a
@@ -47,6 +54,35 @@ Work in flight on a page's subject shows on the page as one line
 pointing at its md, removed when the work ends. The page changes only
 when the thing it describes changes; the work's status and history
 stay in the md.
+
+## When to write a doc
+
+- **An md, when work reaches something worth not redoing:** a finding,
+  a decision and its reasons, a plan, a measurement, a dead end. The
+  test is whether a later session -- or you, next month -- would
+  otherwise repeat the work or get it wrong. A quick answer stays in
+  the chat. Check for priors first (see
+  [Check for priors first](#check-for-priors-first)).
+- **A `docs/` page, when something lasting will be needed again:** a
+  project, a process, a place, a tool, a recurring task -- something
+  that exists, not something that happened. Prefer extending an
+  existing page to adding one: each page costs a line in the
+  always-loaded index. Pages often grow out of mds: when several mds
+  re-derive the same background, or an md's conclusion becomes how
+  things are, that part moves to a page and the page cites the md.
+- **Neither, when the fact already has a better home:** the thing
+  itself, or its own source (a website, a spreadsheet, the code and its
+  history). Point at it instead.
+
+## docs/
+
+Each long-lived doc carries `_Updated: YYYY-MM-DD_` right after the H1
+(blank line on each side). Bump for substantive changes — new sections,
+factual corrections, structural rewrites. Don't bump for typo fixes,
+link tweaks, or formatting-only changes. ISO format.
+
+Content is agent-agnostic: describe how things are, not how agents
+should behave. Agent behavior belongs in `CLAUDE.md`.
 
 ### Keeping churn out of docs/
 
@@ -95,10 +131,10 @@ A page whose table is the record -- an inventory, a contact list, a log
 
 ### Demoting a page to mds/
 
-`docs/index.md` is loaded into every session, so each entry costs
-startup context indefinitely; `mds/index.md` is read only on demand. A
-page earns its place while a session might need it unprompted. When
-that stops -- the project ends, the subject goes dormant -- `git mv` it to
+A page's index entry is loaded into every session (see
+[Progressive disclosure](#progressive-disclosure)), so a page earns its
+place while a session might need it unprompted. When that stops -- the
+project ends, the subject goes dormant -- `git mv` it to
 `mds/YYYY-MM-DD-<slug>.md` dated the day of the move, note the move and
 its reason in its summary, and re-point any links to it in the same
 commit.
