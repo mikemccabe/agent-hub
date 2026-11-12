@@ -26,6 +26,14 @@ commit it without asking. Commit by pathspec
 (`git commit -m ... -- <paths>`), so only the files of this change go
 in. An md made with `/md` is committed as it is created.
 
+Git needs an author name and email. Before the first commit of a
+session, check `git config user.name` and `git config user.email`. If
+either is empty, ask the user once which name and email to use. Say
+that real ones are optional, and offer the placeholder (`Hub User`,
+`hub@example.com`) if they prefer. Then set both for this repo with
+`git config user.name` and `git config user.email`. Once set, don't
+raise it again.
+
 ## Writing in docs/
 
 Before adding a number, a list, a version, a status line or a bit of

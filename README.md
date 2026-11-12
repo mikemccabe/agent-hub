@@ -15,6 +15,17 @@ yours.
 Copy it rather than forking it. The copy is yours, with its own
 history; nothing here expects changes to flow back.
 
+Git puts a name and email on every commit. If this machine has none
+set (`git config user.name` prints nothing), set them once. Real ones
+are optional; use a placeholder if you prefer:
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+```
+
+If you skip this, the agent asks before its first commit.
+
 On GitHub, **Use this template** at the top of the repo page makes the
 copy, or from a terminal:
 
