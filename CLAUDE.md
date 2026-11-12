@@ -42,6 +42,12 @@ history to a `docs/` page, apply "Keeping churn out of docs/" in
 than the answer, scale rather than a count, status and history in an
 md.
 
+## Other repos
+
+Refer to the other repos by name (`api`), not by path on disk: where
+each one lives is per machine, set in `.claude/settings.local.json`
+([docs/hub.md](docs/hub.md)).
+
 ## Doc timestamps
 
 Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line

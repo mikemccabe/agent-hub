@@ -56,9 +56,10 @@ git and `python3` both come with the Xcode Command Line Tools:
 
 Then:
 
-1. If you have sibling repos, list them in
-   `.claude/settings.local.json` (see [docs/hub.md](docs/hub.md)). The
-   file is yours alone and is gitignored.
+1. List the other repos you work with, if any, in
+   `.claude/settings.local.json` (see [docs/hub.md](docs/hub.md)); they
+   can live anywhere on disk. The file is yours alone and is
+   gitignored.
 2. Consider turning off the agent's own memory, so that findings land
    in `mds/` where they are tracked ("Agent memory" in
    [docs/dated-markdown.md](docs/dated-markdown.md)).
@@ -95,6 +96,6 @@ it lives somewhere you control.
   document and commits it. The skill is a few lines; the convention it
   follows lives in [docs/dated-markdown.md](docs/dated-markdown.md).
 
-- **Multi-repo hub** -- sessions for work that spans several sibling
-  repos start here, with cross-repo notes kept in `mds/`. See
+- **Multi-repo hub** -- sessions for work that spans several repos
+  start here, with cross-repo notes kept in `mds/`. See
   [docs/hub.md](docs/hub.md).

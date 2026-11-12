@@ -8,7 +8,7 @@ summary: >-
 # 2026-11-06 Slow checkout page
 
 _A sample `mds/` entry. Not a real investigation; it shows the shape of
-a working document and how one hub session spans sibling repos. Delete
+a working document and how one hub session spans several repos. Delete
 it once you have your own._
 
 ## Context
@@ -19,11 +19,11 @@ repos are mapped in [the shop](../docs/shop.md).
 
 ## What I looked at (cross-repo)
 
-1. **`../web`** -- the checkout page renders the same; no change to its
+1. **`web`** -- the checkout page renders the same; no change to its
    bundle since the slowdown began.
-2. **`../api`** -- the cart endpoint's response time stepped up on one
+2. **`api`** -- the cart endpoint's response time stepped up on one
    date, matching the slowdown.
-3. **`../infra`** -- a config change the same day lowered the API's
+3. **`infra`** -- a config change the same day lowered the API's
    connection pool size.
 
 ## Hypothesis
