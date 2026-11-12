@@ -1,10 +1,9 @@
 ---
 summary: The multi-repo hub pattern -- one repo where cross-repo sessions start, and the additionalDirectories setting that lets it read the other repos you work with.
+updated: 2026-11-11
 ---
 
 # The Multi-Repo Hub Pattern
-
-_Updated: 2026-11-11_
 
 One repo (this one) is where sessions start for work that spans
 several repos, projects, or subjects. The hub:

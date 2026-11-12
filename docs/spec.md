@@ -1,10 +1,9 @@
 ---
 summary: Repo overview -- what this hub is for and its layout. Start here.
+updated: 2026-11-06
 ---
 
 # agent-hub
-
-_Updated: 2026-11-06_
 
 A hub repo for working with a coding agent across several repos,
 projects or subjects: sessions start here, and their context lives in

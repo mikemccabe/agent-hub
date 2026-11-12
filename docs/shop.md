@@ -3,11 +3,10 @@ summary: >-
   The shop: the three repos behind the store (web, api, infra),
   what each is, and where to look for deploys, dashboards, owners and
   settings. A sample page.
+updated: 2026-11-06
 ---
 
 # The shop
-
-_Updated: 2026-11-06_
 
 _A sample `docs/` page. Not a real system; it shows the shape of a
 durable page: what exists and where to look, with status and history

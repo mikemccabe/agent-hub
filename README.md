@@ -78,9 +78,9 @@ it lives somewhere you control.
   overview and the doc list and follows pointers from there. Reference
   lives in `docs/`, not in `CLAUDE.md`.
 
-- **Durable `docs/`** -- long-lived reference. Each doc has an
-  `_Updated: YYYY-MM-DD_` line, bumped only for substantive changes.
-  Docs describe how things are; agent behavior stays in `CLAUDE.md`.
+- **Durable `docs/`** -- long-lived reference. Each doc's frontmatter
+  carries `updated:`, bumped only for substantive changes. Docs
+  describe how things are; agent behavior stays in `CLAUDE.md`.
 
 - **Dated `mds/`** -- `YYYY-MM-DD-name.md` working documents for
   planning, investigations, dead ends. Not authoritative: the date

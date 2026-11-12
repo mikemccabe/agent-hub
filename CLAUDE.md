@@ -7,10 +7,12 @@ reading it whole.
 ## Frontmatter and indexes
 
 Every doc in `docs/` and `mds/` starts with a YAML frontmatter block
-whose `summary:` is its index entry. Write or revise the summary when
-adding or substantively changing a doc. Never edit `docs/index.md` or
-`mds/index.md` by hand: the pre-commit hook regenerates them, and
-`bin/md-index` does the same when the hook is not enabled.
+whose `summary:` is its index entry. When adding or substantively
+changing a doc, write or revise its summary and, on a `docs/` page, set
+`updated:` to today's date. A typo fix, link tweak or formatting change
+does neither. Never edit `docs/index.md` or `mds/index.md` by hand: the
+pre-commit hook regenerates them, and `bin/md-index` does the same when
+the hook is not enabled.
 
 ## Suggesting an md
 
@@ -47,10 +49,3 @@ md.
 Refer to the other repos by name (`api`), not by path on disk: where
 each one lives is per machine, set in `.claude/settings.local.json`
 ([docs/hub.md](docs/hub.md)).
-
-## Doc timestamps
-
-Long-lived docs under `docs/` carry an `_Updated: YYYY-MM-DD_` line
-right after the H1. Bump it for substantive revisions only, not for
-typo fixes, link tweaks or formatting; see "docs/" in
-[docs/dated-markdown.md](docs/dated-markdown.md).

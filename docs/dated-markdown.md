@@ -5,11 +5,10 @@ summary: >-
   out of docs/, demoting a page, frontmatter summaries and the
   generated indexes, checking for prior mds, naming plan elements,
   citing mds, companion directories, supersession.
+updated: 2026-11-11
 ---
 
 # Markdown Documents
-
-_Updated: 2026-11-06_
 
 Two flavors:
 
@@ -93,10 +92,10 @@ indexes are the one place to look. It is a user-wide setting, in
 
 ## docs/
 
-Each long-lived doc carries `_Updated: YYYY-MM-DD_` right after the H1
-(blank line on each side). Bump for substantive changes -- new sections,
-factual corrections, structural rewrites. Don't bump for typo fixes,
-link tweaks, or formatting-only changes. ISO format.
+Each long-lived doc carries `updated: YYYY-MM-DD` in its frontmatter:
+the day of its last substantive change. Bump it for new sections,
+factual corrections and structural rewrites; not for typo fixes, link
+tweaks or formatting-only changes.
 
 Content is agent-agnostic: describe how things are, not how agents
 should behave. Agent behavior belongs in `CLAUDE.md`.
@@ -174,9 +173,11 @@ summary: >-
 # 2026-11-06 Slow checkout page
 ```
 
-Optional keys: `status: superseded` and `superseded-by: <file>` (see
+A `docs/` page also carries `updated:` (see [docs/](#docs)); an md may,
+when it is substantively revised after its date. Optional keys:
+`status: superseded` and `superseded-by: <file>` (see
 [Supersession](#supersession)). Derivable facts are not fields: no
-`title:` (the H1 has it) and no `date:` (the filename has it).
+`title:` (the H1 has it) and no `date:` on an md (the filename has it).
 
 Use a block scalar (`>-`) for any summary longer than a line or
 containing `: `, which plain YAML values cannot hold.
