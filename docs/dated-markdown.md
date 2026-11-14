@@ -5,7 +5,7 @@ summary: >-
   out of docs/, demoting a page, frontmatter summaries and the
   generated indexes, checking for prior mds, naming plan elements,
   citing mds, companion directories, supersession.
-updated: 2026-11-11
+updated: 2026-11-14
 ---
 
 # Markdown Documents
@@ -82,9 +82,10 @@ Claude Code can also keep notes of its own between sessions (auto
 memory), in a directory outside the repo. In a hub, consider turning it
 off: a finding kept there is unversioned, local to one machine and
 invisible to anyone reading the repo, and it is one less reason to
-write the md. With it off, what is worth keeping gets an md, and the
-indexes are the one place to look. It is a user-wide setting, in
-`~/.claude/settings.json`:
+write the md. With it off, what is worth keeping gets an md, what a
+session can reach from here goes in [capabilities.md](capabilities.md),
+and the indexes are the one place to look. It is a user-wide setting,
+in `~/.claude/settings.json`:
 
 ```json
 { "autoMemoryEnabled": false }

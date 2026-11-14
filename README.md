@@ -60,16 +60,22 @@ Then:
    `.claude/settings.local.json` (see [docs/hub.md](docs/hub.md)); they
    can live anywhere on disk. The file is yours alone and is
    gitignored.
-2. Consider turning off the agent's own memory, so that findings land
+2. Optionally, have the agent record what else it can use -- tools you
+   are signed in to, connectors, other machines -- in
+   [docs/capabilities.md](docs/capabilities.md). The page also grows
+   as you correct the agent.
+3. Consider turning off the agent's own memory, so that findings land
    in `mds/` where they are tracked ("Agent memory" in
    [docs/dated-markdown.md](docs/dated-markdown.md)).
-3. Delete the two sample files, [docs/shop.md](docs/shop.md) and
+4. Delete the two sample files, [docs/shop.md](docs/shop.md) and
    [mds/2026-11-06-slow-checkout.md](mds/2026-11-06-slow-checkout.md),
    once you have your own, or keep them as format references.
 
 A remote is optional; the clone path above works without one. If you
 keep one, make it private and your own: the record stays yours only if
-it lives somewhere you control.
+it lives somewhere you control, and
+[docs/capabilities.md](docs/capabilities.md) comes to list what you
+have access to.
 
 ## What's here
 
@@ -99,3 +105,8 @@ it lives somewhere you control.
 - **Multi-repo hub** -- sessions for work that spans several repos
   start here, with cross-repo notes kept in `mds/`. See
   [docs/hub.md](docs/hub.md).
+
+- **Capabilities page** -- what a session can reach beyond the files
+  (signed-in tools, connectors, other machines) is recorded in
+  [docs/capabilities.md](docs/capabilities.md), which a session checks
+  before concluding something can't be done. It starts empty.

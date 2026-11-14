@@ -49,3 +49,15 @@ md.
 Refer to the other repos by name (`api`), not by path on disk: where
 each one lives is per machine, set in `.claude/settings.local.json`
 ([docs/hub.md](docs/hub.md)).
+
+## Capabilities
+
+Before saying something can't be done from here -- no access, no
+tool, no way to see it -- check
+[docs/capabilities.md](docs/capabilities.md) and try the way in.
+Where the page says something is not available, say so, with the day
+it was checked, and offer to check again instead of trying.
+
+When a "can't" turns out wrong, or the user shows a way in, suggest
+an entry in one line. When an entry fails, say so in your answer and
+suggest the correction in one line.
